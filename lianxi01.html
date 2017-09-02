@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="vue.js"></script>
+    </head>
+    <body>
+<div id="app">
+	{{title}}
+</div>
+<script type="text/javascript">
+	//对象继承
+	
+	//下面是ES6语法
+	var subClass=Vue.extend({
+     data(){
+     	return{
+     		title:'中国梦我的梦'
+     	}
+     }
+})
+
+	// 下面是ES5语法
+	// function data(){
+	// 	return{
+ //     		title:'中国梦我的梦'
+ //     	}
+	// }
+	// 
+var vm=new subClass({
+	el:'#app'
+});
+
+</script>
+
+    </body>
+
+
+</html>
